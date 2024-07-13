@@ -21,19 +21,19 @@ websites and send all new posts to subscribers which have not been sent yet).
 
 ### 1. Create a new website with POST method
 
-- [Website API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/request/27786069-d13075d5-fd34-4526-9340-a3b6fa63e48d?action=share&creator=27786069&ctx=documentation)
+- [Website API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/example/27786069-1528eaef-82ab-4dec-a2d4-2e2af962b5e2?action=share&creator=27786069&ctx=documentation)
 
 ### 2. Create a new website post with POST method
 
-- [Post API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/request/27786069-63d2571c-5382-4009-8f2c-e162a54ad14e?action=share&creator=27786069&ctx=documentation)
+- [Post API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/example/27786069-dccd6743-96b6-44b0-87c8-e444e5af4df6?action=share&creator=27786069&ctx=documentation)
 
 ### 3. Create a new user with POST method
 
-- [Register API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/request/27786069-88b325ed-659e-4f02-b517-718a3cbafb5e?action=share&creator=27786069&ctx=documentation)
+- [Register API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/example/27786069-a85e7c79-460d-4bf5-ad6a-a37e1de6ca44?action=share&creator=27786069&ctx=documentation)
 
 ### 4. Create a subscribe with POST method
 
-- [Subscribe API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/request/27786069-40defc02-64bb-49b4-b2bd-39e7fc17c066?action=share&creator=27786069&ctx=documentation)
+- [Subscribe API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/example/27786069-20ff02da-6d8d-4da9-8648-4ce5906b3ae6?action=share&creator=27786069&ctx=documentation)
 
 
 ## Installation
