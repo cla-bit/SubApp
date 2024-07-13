@@ -95,6 +95,10 @@ To Run the Scheduling, open another terminal
 
       php artisan queue:work
 
+To Run the Tests, open another terminal
+
+      php artisan test
+
 
 Kindly note, Run cronjob on Unix based OS not on Windows OS, as Windows do not support cronjob tasks. Other alternative is to use Celery or Redis.
 -----------
