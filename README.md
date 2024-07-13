@@ -22,7 +22,7 @@ websites and send all new posts to subscribers which have not been sent yet).
 
 #### 1. Download
 
-      git clone https://github.com/cla-bit/subApp
+      git clone https://github.com/cla-bit/SubApp
 
 #### 2. Environment Files
 This package ships with a .env.example file in the root of the project.
