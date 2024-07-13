@@ -17,6 +17,15 @@ websites and send all new posts to subscribers which have not been sent yet).
 * No duplicate stories should get sent to subscribers.
 * Tests
 
+# Postman API Sample
+
+### 1. Create a new website with POST method
+
+- [Website API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/request/27786069-d13075d5-fd34-4526-9340-a3b6fa63e48d?action=share&creator=27786069&ctx=documentation)
+
+### 2. Create a new website post with POST method
+
+- [Post API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/request/27786069-63d2571c-5382-4009-8f2c-e162a54ad14e?action=share&creator=27786069&ctx=documentation)
 
 ## Installation
 
