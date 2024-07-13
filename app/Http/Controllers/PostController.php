@@ -5,17 +5,25 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Website;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\validator;
+use Illuminate\Support\Facades\Validator;
 
 
 class PostController extends Controller
 {
-    public function store(Request $request, Website $website)
+
+    /**
+     * Store a newly created post in storage.
+     *
+     * @param Request $request
+     * @param Website $website
+     * @return \Illuminate\Http\JsonResponse
+     */
+
+     public function store(Request $request, Website $website)
     {
 
-        $validator = validator::make($request->all(), [
-            'website_id' => 'required|exists:website,id',
-            'title' => 'required|strind|max:255',
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|string|max:255',
             'description' => 'required|string',
         ]);
 
@@ -23,7 +31,11 @@ class PostController extends Controller
             return response()->json(['errors' => $validator->errors()], 400);
         }
 
-        $post = Post::create($request->all());
+        $post = Post::create([
+            'website_id' => $website->id,
+            'title' => $request->title,
+            'description' => $request->description,
+        ]);
 
         return response()->json($post, 201);
     }

@@ -9,6 +9,12 @@ class Website extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+
     protected $fillable = ['name', 'url'];
 
     public function posts()
@@ -16,7 +22,12 @@ class Website extends Model
         return $this->hasMany(Post::class);
     }
 
-    public function subscribers()
+
+    /**
+     * The users that subscribe to the website.
+     */
+
+     public function subscribers()
     {
         return $this->belongsToMany(User::class, 'subscriptions');
     }

@@ -4,11 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Website;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 
 class WebsiteController extends Controller
 {
-    public function store(Request $request)
+
+    /**
+     * Store a newly created website in storage.
+     *
+     * @param Request $request
+     * @return JsonResponse
+     */
+
+     public function store(Request $request): JsonResponse
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',

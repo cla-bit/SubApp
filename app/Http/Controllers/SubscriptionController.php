@@ -6,16 +6,25 @@ use App\Models\Subscription;
 use App\Models\User;
 use App\Models\Website;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\validator;
+use Illuminate\Support\Facades\Validator;
 
 class SubscriptionController extends Controller
 {
-    public function store(Request $request, Website $website)
+
+    /**
+     * Store a newly created subscription in storage.
+     *
+     * @param Request $request
+     * @param Website $website
+     * @return \Illuminate\Http\JsonResponse
+     */
+
+     public function store(Request $request, Website $website)
     {
 
-        $validator = validate::make(request->all(), [
+        $validator = Validator::make($request->all(), [
             'user_id' => 'required|exists:users,id',
-            'website_id' => 'required|exists:website,id',
+            'website_id' => 'required|exists:websites,id',
         ]);
 
         if ($validator->fails()) {
@@ -24,7 +33,7 @@ class SubscriptionController extends Controller
 
         $subscription = Subscription::firstOrCreate([
             'user_id' => $request->user_id,
-            'website_id' => $request->website_id,
+            'website_id' => $website->id,
         ]);
 
         return response()->json($subscription, 201);
