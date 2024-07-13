@@ -3,7 +3,8 @@
 namespace Tests\Unit;
 
 use App\Models\Website;
-use PHPUnit\Framework\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 
 class WebsiteTest extends TestCase

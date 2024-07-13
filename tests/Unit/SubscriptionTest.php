@@ -5,7 +5,9 @@ namespace Tests\Unit;
 use App\Models\User;
 use App\Models\Website;
 use App\Models\Subscription;
-use PHPUnit\Framework\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
+
 
 class SubscriptionTest extends TestCase
 {
@@ -17,19 +19,24 @@ class SubscriptionTest extends TestCase
 
         $website = Website::factory()->create();
 
-        $response = $this->postJson("/api/websites/{$website->id}/subscribe", [
+        $user = User::factory()->create([
             'name' => 'Test User',
-            'email' => 'testuser@example.com'
+            'email' => 'test@email.com',
+        ]);
+
+        $response = $this->postJson("/api/websites/{$website->id}/subscribe", [
+            'user_id' => $user->id,
+            'website_id' => $website->id,
         ]);
 
         $response->assertStatus(201)
                  ->assertJson([
-                     'user_id' => User::where('email', 'testuser@example.com')->first()->id,
+                     'user_id' => $user->id,
                      'website_id' => $website->id
                  ]);
 
         $this->assertDatabaseHas('subscriptions', [
-            'user_id' => User::where('email', 'testuser@example.com')->first()->id,
+            'user_id' => $user->id,
             'website_id' => $website->id
         ]);
     }

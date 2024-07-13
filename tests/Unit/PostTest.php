@@ -4,7 +4,9 @@ namespace Tests\Unit;
 
 use App\Models\Post;
 use App\Models\Website;
-use PHPUnit\Framework\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
+
 
 class PostTest extends TestCase
 {
