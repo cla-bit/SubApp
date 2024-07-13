@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Queue;
 class SendEmails extends Command
 {
     /**
-     * The name and signature of the console command.
+     * Console command name.
      *
      * @var string
      */
@@ -20,7 +20,7 @@ class SendEmails extends Command
     protected $signature = 'send:emails';
 
     /**
-     * The console command description.
+     * Console command description.
      *
      * @var string
      */
@@ -28,14 +28,14 @@ class SendEmails extends Command
     protected $description = 'send emails to subscribers about new posts';
 
     /**
-     * Construct the console command. 
+     * The console command constructor. 
      */
     public function __construct(){
         parent::__construct();
     }
 
     /**
-     * Execute the console command.
+     * Handle the console command.
      */
     public function handle()
     {

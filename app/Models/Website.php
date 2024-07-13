@@ -24,7 +24,7 @@ class Website extends Model
 
 
     /**
-     * The users that subscribe to the website.
+     * Subscribers to a particular website.
      */
 
      public function subscribers()
