@@ -78,6 +78,7 @@ To Run the Scheduling, open another terminal
       php artisan queue:work
 
 
+Kindly note, Run cronjob on Unix based OS not on Windows OS, as Windows do not support cronjob tasks. Other alternative is to use Celery or Redis.
 -----------
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
