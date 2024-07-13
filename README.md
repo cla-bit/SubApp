@@ -73,6 +73,10 @@ To Run the application
 
       php artisan serve
 
+To Run the Scheduling, open another terminal
+
+      php artisan queue:work
+
 
 -----------
 
