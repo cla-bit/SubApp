@@ -15,4 +15,22 @@ class Subscription extends Model
      * @var array
      */
     protected $fillable = ['user_id', 'website_id'];
+
+    /**
+     * Get the user that owns the subscription.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the website that the subscription belongs to.
+     */
+    public function website()
+    {
+        return $this->belongsTo(Website::class);
+    }
+
+
 }

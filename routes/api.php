@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\WebsiteController;
@@ -22,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+
+// Enpoint to create a user
+Route::post('register', [AuthController::class, 'register']);
 
 // Endpoint to create a particular website
 Route::post('websites', [WebsiteController::class, 'store']);

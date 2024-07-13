@@ -27,6 +27,12 @@ websites and send all new posts to subscribers which have not been sent yet).
 
 - [Post API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/request/27786069-63d2571c-5382-4009-8f2c-e162a54ad14e?action=share&creator=27786069&ctx=documentation)
 
+### 3. Create a new user with POST method
+
+- [Register API Endpoint](https://www.postman.com/cla-bit/workspace/ship29ja/request/27786069-88b325ed-659e-4f02-b517-718a3cbafb5e?action=share&creator=27786069&ctx=documentation)
+
+
+
 ## Installation
 
 #### 1. Download
