@@ -18,6 +18,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::post('/api/websites', [WebsiteController::class, 'store']);
-Route::post('/api/websites/posts', [PostController::class, 'store']);
-Route::post('/api/websites/subscribe', [SubscriptionController::class, 'store']);
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+
+// Endpoint to create a particular website
+Route::post('websites', [WebsiteController::class, 'store']);
+
+// Endpoint to create a post for a particular website
+Route::post('websites/{website}/posts', [PostController::class, 'store']);
+
+// Endpoint to subscribe a user to a particular website
+Route::post('websites/{website}/subscribe', [SubscriptionController::class, 'store']);
