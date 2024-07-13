@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->boolean('is_Sent')->default(false);
+            $table->boolean('is_sent')->default(false);
         });
     }
 
